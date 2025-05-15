@@ -1,0 +1,52 @@
+.move-history-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.move-history {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: 48%;
+  max-height: 200px;
+  overflow-y: auto;
+  color: white;
+}
+
+.move-history h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* border-bottom: 1px solid #ffffff33; */
+}
+
+.red-move-history h3 {
+  color: var(--red-color);
+}
+
+.blue-move-history h3 {
+  color: var(--blue-color);
+}
+
+.move-item {
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+.move-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.move-history:empty::after {
+  /* content: "No moves yet"; */
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}

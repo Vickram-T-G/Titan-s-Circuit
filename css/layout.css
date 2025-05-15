@@ -1,0 +1,78 @@
+.game-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.game-controls button {
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 1rem;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.game-controls button:hover {
+  background-color: rgb(7, 176, 7);
+}
+
+/* game info*/
+.game-info {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-status {
+  min-width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0 20px;
+}
+
+#game-message {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+#game-timer {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#turn-display {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.game-instructions {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+.game-instructions h3 {
+  /* color: var(--light-text); */
+  margin-bottom: 10px;
+}
+
+.game-instructions p {
+  line-height: 1.4;
+  margin-bottom: 5px;
+}

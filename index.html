@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titan Circuit Game</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <h1>Titan's Circuit</h1>
+        <div class="game-controls">
+          <button id="undo-btn" title="Undo last move">↩ undo</button>
+          <button id="redo-btn" title="Redo move">↪ redo</button>
+          <button id="pause-btn">pause</button>
+          <button id="reset-btn">reset</button>
+          <!-- <button id="reality-warp-btn">Reality Warp: OFF</button>
+          <button id="gaias-wrath-btn">Gaia's Wrath</button> -->
+        </div>
+      </header>
+
+      <div class="game-info">
+        <div class="player-info player-red">
+          <h2>player Red</h2>
+          <div class="score">score: <span id="red-score">0</span></div>
+          <div class="timer">time: <span id="red-timer">00:00</span></div>
+          <div class="Pawns">pawns: <span id="red-Pawns">0</span>/4</div>
+        </div>
+
+        <div class="game-status">
+          <div id="game-message">Place your Pawns on the outer circuit</div>
+          <div id="game-timer">Game Time: <span>10:00</span></div>
+          <div id="turn-display">Red's Turn</div>
+        </div>
+
+        <div class="player-info player-blue">
+          <h2>player Blue</h2>
+          <div class="score">score: <span id="blue-score">0</span></div>
+          <div class="timer">time: <span id="blue-timer">00:00</span></div>
+          <div class="Pawns">pawns: <span id="blue-Pawns">0</span>/4</div>
+        </div>
+      </div>
+
+      <!-- Move History Display -->
+      <div class="move-history-container">
+        <div id="red-move-history" class="move-history red-move-history"></div>
+        <div
+          id="blue-move-history"
+          class="move-history blue-move-history"
+        ></div>
+      </div>
+
+      <div class="game-board" id="game-board">
+        <!-- hex board will be created by js -->
+      </div>
+
+      <div class="dunes">
+        <button id="reality-warp-btn">Reality Warp: OFF</button>
+        <button id="gaias-wrath-btn">Gaia's Wrath</button>
+      </div>
+
+      <div class="game-instructions">
+        <h3>how to play:</h3>
+        <p>
+          1) players take turns placing titans on the outer circuit or moving
+          existing ones.
+        </p>
+        <p>
+          2) when a circuit is fully filled, the inner circuit gets unlocked.
+        </p>
+        <p>
+          3) points are earned by controlling edges (having titans on both
+          ends).
+        </p>
+        <p>
+          4) a titan surrounded by opponent titans(after placing all titans) is
+          removed from play.
+        </p>
+        <p>
+          5) the player with the highest score wins when time runs out or the
+          inner circuit is filled.
+        </p>
+      </div>
+
+      <!-- Game End Modal -->
+      <div id="game-end-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Game Over</h2>
+            <span class="close-button">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div id="winner-display"></div>
+            <div class="game-results">
+              <div class="result-item">
+                <div class="player-result player-red-result">
+                  <h3>Red player</h3>
+                  <p>score: <span id="modal-red-score">0</span></p>
+                  <p>time: <span id="modal-red-time">00:00</span></p>
+                </div>
+                <div class="player-result player-blue-result">
+                  <h3>Blue player</h3>
+                  <p>score: <span id="modal-blue-score">0</span></p>
+                  <p>time: <span id="modal-blue-time">00:00</span></p>
+                </div>
+              </div>
+              <div class="result-item">
+                <p>total game time: <span id="modal-game-time">00:00</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="play-again-btn">Play Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

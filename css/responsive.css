@@ -1,0 +1,69 @@
+/* responsive */
+
+/* when i split the screen board is not fitting UNTIL WE EXPLICITLY REFRESH*/
+
+@media (max-width: 768px) {
+  .game-info {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .player-info {
+    margin-bottom: 10px;
+  }
+
+  .game-status {
+    margin: 10px 0;
+  }
+
+  .game-board {
+    height: 450px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  .move-history-container {
+    flex-direction: column;
+  }
+
+  .move-history {
+    width: 100%;
+    margin-bottom: 10px;
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-board {
+    height: 350px;
+  }
+
+  .node {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Pawn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .edge-weight {
+    font-size: 10px;
+  }
+
+  .game-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .game-controls button {
+    margin: 5px;
+  }
+
+  .move-history {
+    max-height: 120px;
+  }
+}

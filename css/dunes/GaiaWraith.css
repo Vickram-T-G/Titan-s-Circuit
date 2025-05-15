@@ -1,0 +1,33 @@
+@keyframes pulse-GraiWraith {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.weight-changed {
+  animation: pulse-GraiWraith 1s ease-in-out;
+  color: var(--highlight-yellow);
+  font-weight: bold;
+}
+
+#gaias-wrath-btn {
+  background-color: #b22222;
+}
+
+#gaias-wrath-btn:hover:not(:disabled) {
+  background-color: #ff4500;
+}
+
+#gaias-wrath-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}

@@ -1,0 +1,131 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 3px var(--highlight-green),
+      0 0 10px var(--highlight-green);
+  }
+  50% {
+    box-shadow: 0 0 0 5px var(--highlight-green),
+      0 0 20px var(--highlight-green);
+  }
+  100% {
+    box-shadow: 0 0 0 3px var(--highlight-green),
+      0 0 10px var(--highlight-green);
+  }
+}
+
+@keyframes pulse-selected {
+  0% {
+    box-shadow: 0 0 0 3px var(--highlight-yellow),
+      0 0 10px var(--highlight-yellow);
+  }
+  50% {
+    box-shadow: 0 0 0 5px var(--highlight-yellow),
+      0 0 20px var(--highlight-yellow);
+  }
+  100% {
+    box-shadow: 0 0 0 3px var(--highlight-yellow),
+      0 0 10px var(--highlight-yellow);
+  }
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* pawn */
+@keyframes pawn-place {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pawn-remove {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes pawn-highlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 15px 7px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+  }
+}
+
+.Pawn {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform, opacity;
+}
+
+.Pawn.placing {
+  animation: pawn-place 0.6s forwards;
+}
+
+.Pawn.removing {
+  animation: pawn-remove 0.4s forwards;
+}
+
+.Pawn.moving {
+  animation: pawn-highlight 1.5s;
+  z-index: 10;
+}
+
+/* edge */
+.edge {
+  transition: background-color 0.5s, height 0.3s;
+}
+
+/* Button hover animations */
+.game-controls button {
+  transition: all 0.2s ease;
+}
+
+.game-controls button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-controls button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* history */
+.move-item {
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
