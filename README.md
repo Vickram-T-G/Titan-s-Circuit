@@ -19,6 +19,7 @@ Simply open the `index.html` file USING LIVE SERVER (base64 not yet initialized.
 ## Technical Details
 
 - pawn = titan
+- Dunes = PowerUps
 - adding more than 3 conc circuits can be done by just adding an array and some minor tweaks in the code
 - the code has been well optimized and formatted for devs🥳🤩
 
